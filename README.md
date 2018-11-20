@@ -34,3 +34,6 @@ The following line tell the TranslateTransition were it is moving to in this cas
  EASE_BOTH will cause it to slow down at the beginging and the end of the translation.
         
     translateTransition.setInterpolator(Interpolator.LINEAR);
+    
+For more info check out this link:
+https://docs.oracle.com/javafx/2/api/javafx/animation/TranslateTransition.html#byXProperty 
