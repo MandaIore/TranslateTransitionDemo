@@ -7,22 +7,30 @@ It creates a move/translate animation that spans its duration. This is done by u
 How does it work?
 To Make a simple TranslateTrnasiton you must frist add the imports that it uses.
 Imports:
-import javafx.animation.Animation;
-import javafx.animation.Interpolator;
-import javafx.animation.TranslateTransition;
-import javafx.util.Duration;
+         
+    import javafx.animation.Animation;
+    import javafx.animation.Interpolator;
+    import javafx.animation.TranslateTransition;
+    import javafx.util.Duration;
 
 The next step to setting up your own TranslateTrnasiton is setting it up in the initialize.
 
 The line bellow declares the new TranslateTransition. For this example we will call it example. then it declares how long it will run the animation for (in this example it is 14000 milliseconds). Then it tells it what node it is effecting (in this example i am using a imageVeiw called picOne)
 
-TranslateTransition (what you want to call the TranslateTransition) example = new TranslateTransition(Duration.millis(14000), picOne);
+    TranslateTransition (what you want to call the TranslateTransition) example = new TranslateTransition(Duration.millis(14000), picOne);
 
 The next line tells the TranslateTransition were you want it to start, if unspecified it will use the nodes translateX, Y, Z vales
-example.setFromX(0);
 
-The following line tell the TranslateTransition were in is moving to in this case it is moving to translateX 100.   
-example.setToX(100);
+    example.setFromX(0);
 
-        /*the (toX, toY, toZ) value takes precedence if both (toX, toY, toZ) and (byX, byY, byZ) values are specified*/
-        translateTransition.setInterpolator(Interpolator.LINEAR);
+The following line tell the TranslateTransition were it is moving to in this case it is moving to translateX 100.   
+                          
+    example.setToX(100);
+
+ INTERPOLATOR:
+ LINEAR it will move at the same speed for the duration of the translation.
+ EASE_IN will move slowly to start then speed up.
+ EASE_OUT will cause it to slow down near the end of the animaton.
+ EASE_BOTH will cause it to slow down at the beginging and the end of the translation.
+        
+    translateTransition.setInterpolator(Interpolator.LINEAR);
