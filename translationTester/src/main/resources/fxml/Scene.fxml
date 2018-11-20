@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jones.translationtester.FXMLController">
+   <children>
+      <Pane layoutX="301.0" layoutY="246.0">
+         <children>
+            <ImageView fx:id="picOne" fitHeight="201.0" fitWidth="317.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Trees.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="picTwo" fitHeight="201.0" fitWidth="317.0" layoutX="317.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Trees2.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="209.0" stroke="BLACK" strokeType="INSIDE" width="317.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnControl" layoutX="406.0" layoutY="528.0" mnemonicParsing="false" onAction="#controlPressed" prefHeight="64.0" prefWidth="112.0" text="&gt;">
+         <font>
+            <Font name="Baskerville Old Face" size="48.0" />
+         </font>
+      </Button>
+      <Label layoutX="98.0" layoutY="60.0" prefHeight="88.0" prefWidth="548.0" text="The black border represents the visible screen">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
